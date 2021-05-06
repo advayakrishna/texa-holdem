@@ -1,0 +1,56 @@
+
+types:
+  Card:
+    rank: Rank
+    suit: Suit
+  Rank:
+    - ONE
+    - TWO
+    - THREE
+    - FOUR
+    - FIVE
+    - SIX
+    - SEVEN
+    - EIGHT
+    - NINE
+    - TEN
+    - JACK
+    - QUEEN
+    - KING
+    - ACE
+  Suit:
+    - CLUBS
+    - DIAMONDS
+    - HEARTS
+    - SPADES
+  GameStatus:
+    - NOT_STARTED
+    - IN_PROGRESS
+  HandStatus:
+    - NOT_STARTED
+    - PRE_FLOP
+    - FLOP
+    - TURN
+    - RIVER
+  PlayerName: string
+  PlayerState:
+    players: PlayerName[]
+    hand: Card[]
+    board: Card[]
+    gameStatus: GameStatus
+    handStatus: HandStatus
+
+methods:
+  createGame:
+  joinGame:
+  startGame:
+  startHand:
+  progressHand:
+
+auth:
+  anonymous:
+    separator: "-"
+
+userState: PlayerState
+initialize: createGame
+error: string
